@@ -10,3 +10,8 @@
         <h2> <%= link_to blog_post.title, blog_post %> </h2>
     </div>
 <% end %>
+
+<%# Render a view helper in your views (skipping nav links for empty pages) %>
+<div class="pt-5 pb-16">
+    <%== pagy_nav(@pagy) if @pagy.pages > 1 %>
+</div>
